@@ -63,11 +63,13 @@ def main():
 	# run the is_prime() function with the 'number' variable
 	is_prime(number)
 
-# we start a while loop, so the script can be repeated and will only
-# terminate once the 'running' variable is changed from True to False
-
+# I want the script to repeat as long as the variable 'running' is unchanged
+# so we use a while loop with a boolean value as the condition
+# we could write 'while running == True:', but 'while running:' will do the same 
+# however, at the end of the loop the user can break the loop by giving a certain input
 
 while running:
+	# these two functions print the title and the instructions, and ask for the user's input
 	titlebar()
 	main()
 # here we ask the user if they want to do another check, or to end the script
@@ -76,7 +78,8 @@ while running:
 # if the user inputs 'end' or 'exit' the variable 'running' will be changed to False
 	if end == "exit" or end == "end":
 		running = False
-
+# this else statement is not part of the if statement above, it is part of the while loop
+# so as long as running = True, run the loop. *else* do this
 else:
 	# if the variable 'running' is set to 'False', the while loop breaks and the script ends
 	clear()

@@ -1,7 +1,7 @@
 IsPrime v0.9 by LukeLane1984
 
 I started coding with Python just a few weeks ago.
-As a beginner I thought that, writing a script that can calculate
+As a beginner I thought, writing a script that can calculate
 whether a certain number is a prime number or not, might be an
 interesting challenge and fun project.
 

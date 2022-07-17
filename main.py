@@ -10,14 +10,14 @@ def is_prime(num):
 	if num > 1:
 
 		# Iterate from 2 to n/2 using a for loop, adding 1 to num/2 with every iteration
-		# until it either reaches a factor of the given  number, meaning it's not prime
+		# until it reaches a factor of the given  number, meaning it's not prime
 		# But, if it iterates to the same value of the given number that means it can only be divided by itself
 		# (or by 1) which means it's prime, by definition!!
 		for i in range(2, int(num / 2) + 1):
 
 			# If num is divisible by any number between
 			# 2 and n / 2, it is not prime
-			# By taking the modulus of i we can check if it can be divided into
+			# By taking the modulus we can check if it can be divided by
 			# a whole number.
 			# So if the modulus = 0, we know it's not prime
 			if (num % i) == 0:
@@ -29,15 +29,16 @@ def is_prime(num):
 	else:
 		print("> ", num, "is NOT a prime number...")
 
-
+# function to clear the screen easily 
+# Note: "clear" is a Linux terminal command, on windows, this must be changed to os.system("cls")
 def clear():
 	os.system("clear")
 
-
+# not really necessary to define a function for this, because the exit() command is used only once
 def leave():
 	sys.exit()
 
-
+# defining a function to clear the screen and print the top bar so we can easily repeat this later on
 def titlebar():
 	clear()
 	print("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓")
@@ -53,7 +54,6 @@ def titlebar():
 	print("┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩")
 	print("│             CHECK IF A NUMBER IS A PRIME NUMBER OR NOT             │")
 	print("└────────────────────────────────────────────────────────────────────┘\n")
-
 
 def main():
 	print("Input number and press Enter to check if it's prime")
